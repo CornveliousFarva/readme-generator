@@ -1,10 +1,13 @@
-// my github api key: 3a60031328deefa35189089ddad489362c4bb01c
+//API key for GitHub: 0f8c05ce2d791cd6454275fda76a1c3c10ee3190
+const axios = require("axios");
 
 const api = {
     getUser(username) {
-        fetch(application/vnd.github.v3+json)
+        axios
+        .get(`https://api.github.com/users/${username}`)
         .then((response) => {
-            return response.json();
+            console.log(response.data.avatar_url);
+            console.log(respons.email);
         })
         .then((myJson) => {
             console.log(myJson)
@@ -12,4 +15,4 @@ const api = {
     }
   };
   
-  module.exports = api;
+  module.exports = api; 
