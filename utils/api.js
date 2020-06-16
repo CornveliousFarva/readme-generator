@@ -1,5 +1,6 @@
 //API key for GitHub: 0f8c05ce2d791cd6454275fda76a1c3c10ee3190
 const axios = require("axios");
+require("dotenv").config
 
 const api = {
     getUser(username) {
