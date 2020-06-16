@@ -32,9 +32,27 @@ const questions = [
     message: "What command should be used to intall dependencies?",
     default: "npm i"
   },
-  
+  {
+    type: "input",
+    name: "test",
+    message: "What command should be run to run tests?",
+    default: "npm test"
+  },
+  {
+    type: "input",
+    name: "usage",
+    message:"What does the user need to know about using the repo?"
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "What does the user need to know about contributing to the repo?"
+  }
+];
 
-]
+function writeToFile(fileName, data){
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 
 
