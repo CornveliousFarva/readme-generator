@@ -1,8 +1,10 @@
+// Generste Project URL
 function generateProjectUrl(github, title){
     const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
     return `https://github.com/${github}/${kebabCaseTitle}`;
 }
 
+//Render the license badge
 function renderLicenseBadge(license, github, title){
     if(license !== "None"){
         return `[![GitHub License](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
@@ -10,6 +12,7 @@ function renderLicenseBadge(license, github, title){
     return ''
 }
 
+// Render the license selection
 function renderLicenseSelection(licence){
     if(license !== "None"){
         return(
@@ -21,6 +24,7 @@ function renderLicenseSelection(licence){
     return ''
 }
 
+// Generate Markdown and return question responses
 function generateMarkdown(data){
     return `
     # ${data.title}
