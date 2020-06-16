@@ -54,6 +54,20 @@ function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
+function init(){
+  inquirer.prompt(questions).then((inqurerResponses) => {
+    console.log("Searching...");
+
+    api
+      .getUser(inquirerResponses.github)
+      .then(({data}) => {
+        writeToFile("README.md", generateMarkdown({...inquirerResponses, ...data}));
+      })
+  })
+}
+
+init()
+
 
 
 
