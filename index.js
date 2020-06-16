@@ -50,9 +50,12 @@ const questions = [
   }
 ];
 
-function writeToFile(fileName, data){
+function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
+
+
+
 
 
 
