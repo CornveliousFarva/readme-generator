@@ -3,15 +3,12 @@ const axios = require("axios");
 
 const api = {
     getUser(username) {
-        axios
+        return axios
         .get(`https://api.github.com/users/${username}`)
-        .then((response) => {
-            console.log(response.data.avatar_url);
-            console.log(respons.email);
+        .catch(err => {
+            console.log(`User not found`);
+            process.exit(1);
         })
-        .then((myJson) => {
-            console.log(myJson)
-        });
     }
   };
   

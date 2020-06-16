@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./markdown.js")
-const api = require("./api")
+const generateMarkdown = require("./markdown.js");
+const api = require("./api.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -106,7 +106,7 @@ promptUser()
     return writeFileAsync("ReadMe.md", markdown);
   })
   .then(function() {
-    console.log("Successfully wrote to index.html");
+    console.log("Successfully written to index.html");
   })
   .catch(function(err) {
     console.log(err);
