@@ -21,3 +21,17 @@ function renderLicenseSelection(licence){
     return ''
 }
 
+function generateMarkdown(data){
+    return `
+    # ${data.title}
+    ${renderLicenseBadge(data.license, data.github, data.title)}
+    
+    ## Description
+    
+    ${data.description}
+    
+    ## Table of Contents
+    
+    *[Installation](#installation)`
+}
+
