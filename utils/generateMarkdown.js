@@ -42,6 +42,16 @@ function generateMarkdown(data){
     
     * [Tests](#tests)
     
-    * [Questions](#questions)`
+    * [Questions](#questions)
+    
+    ## Installation
+    
+    To install necessary dependencies, run the following command:
+    
+    \`\`\`
+    ${data.installation}
+    \`\`\`
+    
+    `
 }
 
