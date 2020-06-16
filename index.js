@@ -1,9 +1,11 @@
+// Define paths and origins of sources of code
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
 const api = require("./utils/api");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// Questions being asked
 const questions = [
   {
     type: "input",
@@ -50,10 +52,12 @@ const questions = [
   }
 ];
 
+// Funtction that writes to file
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
+// Init function
 function init(){
   inquirer.prompt(questions).then((inqurerResponses) => {
     console.log("Searching...");
@@ -66,7 +70,7 @@ function init(){
   })
 }
 
-init()
+init();
 
 
 
